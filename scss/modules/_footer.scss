@@ -6,12 +6,175 @@
 /// @since        0.0.3
 ////
 
-/// Default footer styling
 @mixin ubuntu-footer() {
+  @include ubuntu-footer-a;
+  @include ubuntu-footer-b;
+  @include ubuntu-footer-general;
+}
 
+/// Default footer a styling
+@mixin ubuntu-footer-a() {
+  .footer-a {
+    border-bottom: 1px solid $alto-grey;
+    clear: both;
+    display: block;
+    padding-bottom: 20px;
+
+    div {
+      padding-bottom: 10px;
+    }
+
+    ul {
+      border-collapse: collapse;
+      display: table;
+      float: none;
+      margin-left: -15px;
+      padding-bottom: 0;
+      width: 100%;
+      
+      li {
+        border-right: 1px dotted $warm-grey;
+        display: table-cell;
+        float: none;
+        margin-left: 15px;
+        padding-bottom: 5px;
+        padding-left: 15px;
+        padding-right: 5px;
+        width: auto;
+      }
+
+      li:first-child {
+        padding-left: 0;
+      }
+      
+      ul {
+        margin-left: 0;
+        display: block;
+      }
+      
+    }
+    
+    ul li:last-child, 
+    ul li.last-item {
+      border: 0;
+      padding-right: 0;
+    }
+    
+    li li {
+      background: none;
+      border: 0;
+      display: block;
+      float: none;
+      margin-bottom: 2px;
+      margin-left: 0;
+      min-height: 0;
+      padding-bottom: inherit;
+      padding-left: 0;
+      width: auto;
+      
+      li:last-child {
+        margin-bottom: 0;
+      }
+      
+      a {
+        display: block;
+      }
+    }
+
+    #nav-global li:first-of-type a {
+      margin-left: 0;
+    }
+
+  }
+  
+  @media only screen and (min-width: $site-max-width) {
+    .footer-a {
+      width: $site-max-width;
+      margin: 0 auto;
+    }
+  }            
+}
+
+/// Default footer b styling
+@mixin ubuntu-footer-b() {  
+  footer.global .footer-b {
+    padding: 20px 0;
+    margin: 0 auto;
+
+    ul ul, 
+    ul li, 
+    ul ul, 
+    h2, 
+    h2 a {
+      float: none;
+      margin: 0;
+      padding: 0;
+      width: auto;
+      line-height: 2;
+    }
+    
+    h2 {    
+      display: inline-block;
+      float: left;
+      margin: 0 6px 0 0;
+      padding: 0;
+      line-height: 2.8;
+      
+      a::after {
+        content: ':';
+      }    
+    }
+    
+    ul ul {
+      margin: 0;
+      padding: 0;
+    }
+        
+    li {
+      display: block;
+      clear: both;
+      overflow: hidden;
+      width: 100%;
+
+      li {
+        background: 0;
+        clear: none;
+        float: left;
+        width: auto;
+      }
+
+      li:after {
+        content: '|';
+        padding: 0 6px;
+        position: relative;
+      }
+      
+      li:last-child:after {
+        content: '';
+      }
+    }
+
+	}
+
+  @media only screen and (min-width: $site-max-width) {
+    footer.global .footer-b ul {
+      width: $site-max-width;
+      margin: 0 auto;
+    }
+  }
+}
+
+/// Default footer b styling
+@mixin ubuntu-footer-general() {  	
   .top-link {
     position: absolute;
     left: -999em;
+  }
+  
+  @media only screen and (min-width: $site-max-width) {
+    footer.global {
+      padding: 30px 0 20px;
+    }
   }
 
 }
