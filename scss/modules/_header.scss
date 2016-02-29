@@ -35,7 +35,7 @@
         width: 200px;
       }
     }
-
+    // scss-lint:disable NestingDepth
     li a,
     li a:link,
     li a:visited,
@@ -48,8 +48,13 @@
         background: lighten($brand-color, 6%);
         box-shadow: none;
         color: $white;
+        
+        a {
+          background: none;
+        }
       }
     }
+    // scss-lint:enable NestingDepth
 
     ul {
       @media only screen and (min-width: $navigation-threshold) {
@@ -89,8 +94,8 @@
       padding: 10px 0 0 14px;
     }
 
-    li ul li.active a:link,
-    li ul li.active a:visited {
+    li ul li a.active:link,
+    li ul li a.active:visited {
       background: none;
     }
 
