@@ -16,6 +16,7 @@
 @mixin ubuntu-box() {
   .box {
     @extend %ubuntu-box;
+    border-radius: 4px;
   }
 }
 
@@ -24,6 +25,7 @@
     @extend %box;
     @extend %ubuntu-box;
     background: $light-grey;
+    color: $cool-grey;
   }
 }
 
