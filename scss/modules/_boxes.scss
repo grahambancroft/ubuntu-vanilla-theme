@@ -41,27 +41,19 @@
     @extend %box;
     border-color: $light-grey;
     box-shadow: 0 2px 2px 0 $mid-grey;
+    color: $cool-grey;
     cursor: pointer;
     padding-bottom: 40px;
     position: relative;
     transition: background .2s ease-out;
 
-    &.four-col {
-      h2 a:link,
-      h2 a:visited {
-        font-size: 1.125em;
-      }
-    }
-
-    &.twelve-col {
-      h2 a:link,
-      h2 a:visited {
-        font-size: 1.40625em;
-      }
+    &__title {
+      color: $link-color;
     }
 
     &:hover {
       background-color: $resource-hover;
+      text-decoration: none;
     }
 
     &::after {
@@ -108,7 +100,7 @@
     }
 
     &__category {
-      background: url("#{$asset-path}ed42aefa-icon-resource-hub-icon-document.png") left center no-repeat;
+      background: url("#{$asset-server}ed42aefa-icon-resource-hub-icon-document.png") left center no-repeat;
       color: $warm-grey;
       font-size: 14px;
       letter-spacing: 1px;
@@ -127,7 +119,7 @@
     padding-right: 20px;
   }
 
-  .row-grey .resource::before {
+  .row-grey .resource:before {
     border-right-color: $light-grey;
   }
 }
