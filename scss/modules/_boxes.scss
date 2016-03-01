@@ -15,32 +15,31 @@
 
 @mixin ubuntu-box() {
   .box {
-    @extend %box;
-    border-radius: 4px;
+    @extend %ubuntu-box;
   }
 }
 
 @mixin ubuntu-box-grey() {
   .box--grey {
     @extend %box;
+    @extend %ubuntu-box;
     background: $light-grey;
-    color: $cool-grey;
   }
 }
 
 @mixin ubuntu-box-highlight() {
   .box--highlight {
     @extend %box;
-    border-color: $light-grey;
-    box-shadow: 0 2px 2px 0 $mid-grey;
+    @extend %ubuntu-box;
+    @extend %ubuntu-box-highlight;
   }
 }
 
 @mixin ubuntu-resource() {
   .box--resource {
     @extend %box;
-    border-color: $light-grey;
-    box-shadow: 0 2px 2px 0 $mid-grey;
+    @extend %ubuntu-box;
+    @extend %ubuntu-box-highlight;
     color: $cool-grey;
     cursor: pointer;
     padding-bottom: 40px;
@@ -122,4 +121,13 @@
   .row-grey .resource:before {
     border-right-color: $light-grey;
   }
+}
+
+%ubuntu-box {
+  border-radius: 4px;
+}
+
+%ubuntu-box-highlight {
+  border-color: $light-grey;
+  box-shadow: 0 2px 2px 0 $mid-grey;
 }

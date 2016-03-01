@@ -1,20 +1,21 @@
 /// asset server domain
+/// usage: background: url(#{$asset-server}img//backgrounds/background.jpg) no-repeat 0 0;
 $asset-server: 'https://assets.ubuntu.com/v1/';
 
 /// the theme's core brand colour
-$brand-color: #e95420;
+$brand-color:           $ubuntu-orange;
 
 /// header link color
-$header-link-color: #fff;
+$header-link-color:     #fff;
 
 /// Site maximum width
-$site-max-width: 984px;
+$site-max-width:        984px;
 
 /// Resource hover
-$resource-hover: #fafafa;
+$resource-hover:        #fafafa;
 
 /// Resource shadow
-$resource-shadow: #ddd;
+$resource-shadow:       #ddd;
 
 /// Canonical aubergines
 $dark-aubergine: #2c001e;
@@ -25,4 +26,4 @@ $mid-aubergine: #5e2750;
 $ubuntu-orange: #e95420;
 
 /// Box grey for buttons
-$box-solid-grey: #efefef;
+$box-solid-grey:        #efefef;
