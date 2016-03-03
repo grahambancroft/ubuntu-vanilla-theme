@@ -45,6 +45,14 @@
     padding-bottom: 40px;
     position: relative;
     transition: background .2s ease-out;
+    
+    a {
+      color: $cool-grey;
+      
+      &:hover {
+        text-decoration: none;
+      }
+    }
 
     &__title {
       color: $link-color;
@@ -109,14 +117,6 @@
       position: absolute;
       text-transform: uppercase;
     }
-
-    &.box-image-centered div + span img {
-      margin-top: 40px;
-    }
-  }
-
-  .row-grey .resource:before {
-    border-right-color: $light-grey;
   }
 }
 
